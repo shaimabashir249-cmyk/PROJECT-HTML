@@ -1,0 +1,2050 @@
+* {
+    margin: 0 ;
+    padding: 0 ;
+    text-decoration: none;/* الخط تحت اللينك*/
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    background: white ;
+   min-height: 100vh ;
+    overflow-y: scroll;/*اخفاء سكرول العمودي*/
+}
+
+body::-webkit-scrollbar {
+    display: none ;/*اخفاء سكرول العمودي*/
+}
+.top-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background:white ;
+  font-size: 0.8em;
+  border-bottom: 1px solid #bcbcbc; /* الخط الفاصل */
+  
+  z-index: 1001;
+  padding: 0.7em ;
+}
+
+.top-bar-content{
+  max-width: 1200px;
+  margin: auto;
+ 
+gap: 1em ;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.1em 4em ;
+}
+
+
+.top-bar i{
+
+  color: #f67002;
+  margin-right: 0.4em;
+  
+}
+.menue    a.active {
+  
+  background-color: #f89e54;
+  width: 6em ;
+  height: 1.5em ;
+
+  text-align: center;
+  border-radius: 2em ;
+
+
+}
+.menue {
+  margin-top: 1.6em ;
+}
+.icons-right{
+    position: absolute;
+    margin-left: 80em ;
+  display: flex;
+  justify-content: flex-end;
+ /* يدزهم لليمين */
+
+  gap:1.2em;          /* مسافة كويسة بينهم */
+}
+
+header {
+  
+     position: fixed;
+     top: 0.5em  ;
+     left: 0 ;
+     right: 0 ;
+    width: 100% ;
+    max-width: 100% ;
+    height: auto;
+   
+    z-index: 1000;
+    
+    background: white;
+    padding: 0.6em ;
+  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.3em 0.3em  rgba(0, 0, 0, 0.3);
+
+}
+
+.menue {
+    position: relative;
+    display: flex;
+    gap: 2em;
+    margin-right: 20em;
+    font-weight: bold;
+
+}
+
+.menue a {
+    color: rgb(171, 63, 1);
+}
+
+.menue a:hover {
+    background-color: transparent;
+    color: rgb(247, 150, 94);
+    box-shadow: 0 16px 16px rgba(255, 223, 40, 0.3);
+}
+
+.logo {
+
+    position: relative;
+    top:0.2em ;
+    font-size: 3rem;
+    color: rgb(243, 109, 6);
+    font-weight: bolder;
+    margin-right: auto;
+
+}
+
+header .logo span {
+    color: rgb(242, 206, 4);
+}
+
+
+.icon-menue {
+    color: rgb(255, 166, 33);
+    border-radius: 1vh;
+    gap: 4em;
+    padding: 1.5vh 1.5vh;
+    margin-right: 2em;
+    margin-left: 2em;
+    border: 1px solid rgb(255, 205, 129);
+    cursor: pointer;
+    display: none;
+
+} /* القائمة المخفية تطلع فالتليفون*/
+
+#toggler {
+    display: none;/*check icon in the click */
+}
+
+/************************************************** main page */ 
+.main-page{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 115vh   ;
+    background-image: url('imge/IMG_5741-artguru.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+   
+.content{
+  position: relative;
+  top: 2em ;
+  text-align: left;
+    
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  width: 50em ;
+  margin: 1em auto;
+  padding: 2em 4em ;
+  border-radius: 0.4em ;
+  border: 0.2em solid #fefdfc;
+  overflow: visible;
+    
+}
+.my-image{
+    position: absolute;
+    width: 30.5em ;
+    height: auto;
+    top: -5.9em ;
+    right: -5em ;
+}
+
+.writer{
+   
+    font-size: 3em   ;
+    color: rgb(255, 153, 0);
+    font-weight: bold;
+    line-height: 1.5em     ;
+    animation: shopname 2s linear  ;
+}
+
+@keyframes shopname{
+    from{ opacity:0 ;
+         transform: translateX(-50px );}
+    to{ opacity:1 ;}
+}
+
+
+.content span{
+ color:rgb(251, 249, 249) ;
+ font-size: 1.8em  ;
+ line-height: 2em     ;
+ position: relative;
+ top: -1em ;
+
+}
+
+p{
+    position: relative;
+    top: -1.5em ;
+    width: 30em  ;
+    height: auto  ;
+    color: rgba(249, 249, 249, 0.8) ;
+    font-size: 1rem  ;
+
+}
+.btn{
+
+    color:aliceblue ;
+    background-color: rgb(248, 93, 4);
+    text-align: center;
+    border-radius: 3em  ;
+    padding: 0.9em  0.5em  ;
+    line-height: 5em  ;
+}
+.btn:hover{
+    color:rgb(255, 200, 0) ;
+   box-shadow:0 2px 16px   rgb(255, 210, 184);
+}
+/*************************************************** about us*/
+.home{
+    margin-top: -5em  ;
+      position: relative;
+    overflow: hidden;
+       background-color: #e8e7e6;
+  
+
+ 
+}
+.heading{
+
+    font-size: 2em;
+    background-image: url('wav-2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em ;
+    text-align: center;
+ 
+    width: 80% ;
+    height: auto;
+    margin-left: 5em;
+    color: #9e9d99;
+    box-shadow:
+    0 0.25rem 0.4rem rgba(0, 0, 0, 0.05),
+    0 0.6rem 1.2rem rgba(0, 0, 0, 0.08);
+    
+}
+
+.heading span{
+    
+    padding: 0.5em     ;
+    color:rgb(224, 93, 0);
+  
+}
+   
+.video-container{
+    position: relative;/* بش الكتابة تقعد فالوسط*/
+  overflow: hidden;
+  
+}
+.video-container video{
+    width: 25em    ;
+    border-radius: 2em ;
+    box-shadow: 0.3em 0.2em 0.2em rgba(0,0,0,0.5);
+    height: 23em  ;
+    margin-left: 3em   ;
+    object-fit: fill;/*فيديو يعبي الحاوية بدون قص*/
+ 
+}
+/*************************************************** product*/
+.product{
+
+    margin-top: -1em  ;
+    
+}
+
+ h1{
+    color: rgb(250, 250, 250);
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em     7em    ;
+    line-height: 1.5em   ;
+    position: relative;
+    z-index: 5;
+    margin: 0; /* إلغاء أي مسافات زائدة */
+
+ 
+}
+.contact p{
+    color: rgb(66, 66, 66);
+    padding-top: 2em   ;
+  
+   
+}
+.contact h3{
+    color:#ff9900 ;
+    font-size: 2.5em ;
+}
+
+.video-container  h3{
+    position: absolute;
+   
+    bottom: 4em     ;
+     background: #f5f5f5;
+    width: 100%  ;
+  
+    padding: 0.7em     ;
+    margin-left: 1.5em  ;
+    text-align: center;
+    font-size: 2em ;
+    mix-blend-mode: screen;/* نص شفاف*/
+  
+   
+}
+
+/*****************************/
+#home{
+    padding-top: 7.5em ;/*الفيديو والعنوان نفس لمكان عند ضغط ع هوم*/
+}
+#product{
+    padding-top: 6em ;
+}
+
+#bags-section{
+      padding-top: 6em ;
+}
+#moving-row {
+      padding-top: 14em ;
+}
+#baby{
+      padding-top: 5.8em ;
+}
+#bandana-section {
+       padding-top: 5.8em ;
+}
+
+
+/*********************************/
+.wrapper{
+    text-align:center;
+    position: relative;
+      overflow-x: auto;
+          overflow: hidden;
+}
+
+.slider{
+   position: relative;
+    width:17em  ;
+    height: 27em ;
+    overflow:visible;/*صورة متطلع مقصوصة من لوطا*/
+    margin:auto;
+    border: 0.8vh solid rgb(130, 130, 129) ;
+    box-shadow:
+    0 0.6rem 1rem rgba(0, 0, 0, 0.12),
+    0 1.8rem 3.5rem rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 2em  ;
+    z-index: 1;
+    margin-top: 1em   ;
+  
+}
+
+.track{
+    display:flex;
+    gap:1.5em  ;
+    margin-top: 6em    ;
+    transition:.6s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2 ;
+}
+.track img , .track a {
+    position: relative;
+    z-index: 3;
+}
+
+.item  {
+  
+    box-shadow: 0 0 0.5rem  rgba(0, 0, 0, 0.3);
+    width: 10em  ;
+    height: 11em  ;
+ 
+    object-fit:cover;
+    transition:0.6s;
+    opacity:.4;
+    transform:scale(.8);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    border-radius: 1em ;
+    margin-top: 2em ;
+    border: 2px solid white;
+ 
+}
+
+.item.active{
+    transform:scale(1.45);
+    opacity:1;  
+}
+
+/* الأزرار تحت */
+.buttons{
+   position: absolute;
+    display:flex;
+    margin-bottom: -4.5em ;
+    z-index: 10;
+    margin-left: 33em  ;
+    gap: 2em ;
+    bottom: 5.2em ;
+    
+  
+   
+}
+#prev:hover {
+  box-shadow: 0 6px 0 -4px 
+#dad9d9, 0 9px 0 -4px 
+#888785, 0 12px 0 -4px 
+#fbc102;
+  transform: translateY(-5px);
+  overflow: hidden;
+}
+#next:hover {
+  box-shadow: 0 6px 0 -4px 
+#dad9d9, 0 9px 0 -4px 
+#888785, 0 12px 0 -4px 
+#fbc102;
+  transform: translateY(-5px);
+  overflow: hidden;
+}
+
+
+button{
+   
+    padding: 0.5em 1.5em  ;
+    border:0.2em solid rgb(131, 131, 130) ;
+   box-shadow:
+    0 0.6rem 1rem rgba(0, 0, 0, 0.12),
+    0 1.8rem 3.5rem rgba(0, 0, 0, 0.25);
+    font-size:1em ;
+    border-radius:4em ;
+    font-weight: bolder;
+    cursor:pointer;
+      background: rgb(241, 241, 241) ;
+    color:  rgb(131, 131, 130) ;
+
+    
+  
+
+}
+
+
+
+.circle-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   align-items: center;
+    width: 19.5em ;
+    height: 19.5em;
+    background: #f7d156;
+   border-radius: 50% ;
+   box-shadow: 0 0 0.7em rgba(0, 0, 0, 0.1);
+    z-index:0;
+  
+}
+
+
+.texts{
+    position: absolute;
+  font-weight: bold;
+  font-size: 1.5em ;
+   top: 10% ;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    pointer-events: none;
+    white-space: nowrap;/*نص في سطر واحد*/
+    color: rgb(140, 139, 138) ;
+ font-style: italic;
+   font-family: "Cinzel Decorative", cursive;
+   
+}
+/****************************************************BAG*/
+
+.moving-row h1{
+    text-align: center ;
+    font-size: 2.5em ;
+    color: rgb(240, 133, 1);
+     margin-top:-2em ;
+
+}
+.moving-row h4{
+   border: 1px solid rgb(171, 95, 1);
+   border-radius: 0.5em ;
+   width: 20% ;
+   margin: 30px auto ;
+   text-align: center;
+   padding: 0.3em 0.3em;
+    font-size: 1em ;
+    margin-top: 0.5em ;
+    color: rgb(122, 67, 0);
+
+}
+
+/* الشريط المتحرك */
+.moving-row {
+    position: relative;
+    overflow: hidden;/*بش منمشيش يمين للمنتجات تكون مسك*/
+    white-space: nowrap;
+ 
+}
+
+.moving-track {
+  
+   
+    width: max-content;
+    animation: scroll 50s linear infinite;
+     margin-top:3em ;
+}
+
+.moving-track img {
+    
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 2em;
+    margin-bottom: 5em ;
+   
+  
+}
+.moving-track img:hover {
+
+    transform: scale(1.1);
+    box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+
+}
+.moving-track:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.styling-bags{
+    margin-top: 3em ;
+    font-weight: bolder;
+    font-size: 2em;
+    border: 0.1em solid rgb(255, 204, 0);
+    border-radius: 5em ;
+    width: 8em ;
+    text-align: center;
+    color: #e78003;
+    padding: 0.3em 0.3em ;
+    margin-left: 16em ;
+
+
+}
+.bags-section {
+    padding: 4em ;   /* هنا غيري المسافات اللي تبيها */
+     background-color: #e8e7e6;
+   
+
+}
+.bags-section h1{
+    text-align: center ;
+    font-size: 2.5em ;
+    color: rgb(240, 133, 1);
+}
+.bags-section h4{
+   
+   border: 1px solid rgb(171, 95, 1);
+   border-radius: 0.5em ;
+   width: 20% ;
+   margin: 30px auto ;
+   text-align: center;
+   padding: 0.3em 0.3em;
+    font-size: 1em ;
+    margin-top: 0.5em ;
+    color: rgb(122, 67, 0);
+}
+.bags-section h3{
+    text-align: center;
+    margin-top: 1.5em ;
+    color: rgb(122, 67, 0);
+    font-size: 1em ;
+ 
+}
+
+/* شبكة الحقائب */
+.gellery {
+    position: relative;
+    top: -1em ;
+    display: grid;
+   grid-template-columns: repeat(3 , 130px );
+   justify-content: center;
+   margin-right: 3em ;
+
+}
+
+
+/* الصور نفسها — حجم ثابت ومستقر */
+.gellery img {
+    
+    width: 14em ;
+    height: 14em ;        /* هذا اللي يعطي نفس الحجم لكل حقيبة */
+    object-fit: cover;
+    padding: 0 ;
+    margin: -1.8em ;
+   visibility: hidden;
+    animation: fadein 2s forwards ;
+   
+}
+
+.gellery img:nth-child(1){
+    animation-delay: 0s;
+}
+.gellery img:nth-child(2){
+     animation-delay: 0.5s;
+}
+.gellery img:nth-child(3){
+     animation-delay: 1s;
+}
+.gellery img:nth-child(4){
+     animation-delay: 1.5s;
+}
+.gellery img:nth-child(5){
+     animation-delay: 2s;
+}
+.gellery img:nth-child(6){
+     animation-delay: 2.5s;
+}
+/**************************************************BABY SECTION*/
+.baby{
+     background-color: #e8e7e6;
+  
+}
+.fashion-baby {
+    position: relative;
+    top: -2em ;
+    display: grid;
+    grid-template-columns: repeat( 2 , 280px );
+    justify-content: center;
+    margin-right: 1em ;
+
+}
+
+.fashion-baby img{
+    width: 16em ;
+    height: 12.5em ;        /* هذا اللي يعطي نفس الحجم  */
+    object-fit: cover;
+    animation: fadein 2s forwards ;
+    border-radius: 1em ;
+    margin: 0.3em ;
+}
+@keyframes fadein{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+   
+}
+.baby h1{
+    text-align: center ;
+    font-size: 2.5em ;
+    color: rgb(240, 133, 1);
+}
+.baby h4{
+   
+   border: 1px solid rgb(171, 95, 1);
+   border-radius: 0.5em ;
+   width: 20% ;
+   margin: 30px auto ;
+   text-align: center;
+   padding: 0.3em 0.3em;
+    font-size: 1em ;
+    margin-top: 0.5em ;
+    color: rgb(122, 67, 0);
+   
+}
+
+
+
+/*****************************************************BANDANA*/
+.bandana {
+
+    position: relative;
+    top: -2em ;
+    display: grid;
+    grid-template-columns: repeat( 2 , 280px );
+    justify-content: center;
+    margin-right: 1em ;
+
+}
+.bandana img{
+    width: 16em ;
+    height: 12.5em ;        /* هذا اللي يعطي نفس الحجم لكل حقيبة */
+    object-fit: cover;
+    animation: fadein 2s forwards ;
+    border-radius: 1em ;
+    margin: 0.3em ;
+      box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5);
+}
+.bandana-section h1{
+    text-align: center ;
+    font-size: 2.5em ;
+    color: rgb(240, 133, 1);
+}
+.bandana-section h4{
+   
+    border: 1px solid rgb(171, 95, 1);
+   border-radius: 0.5em ;
+   width: 20% ;
+   margin: 30px auto ;
+   text-align: center;
+   padding: 0.3em 0.3em;
+    font-size: 1em ;
+    margin-top: 0.5em ;
+    color: rgb(122, 67, 0);
+   
+}
+/***************************************************jachet*/
+
+.fashions {
+
+    position: relative;
+    top: -3em ;
+    display: grid;
+    grid-template-columns: repeat( 3 , 280px );
+    justify-content: center;
+    margin-right: 1em ;
+
+}
+.fashions img{
+    width: 16em ;
+    height: 12.5em ;        /* هذا اللي يعطي نفس الحجم لكل حقيبة */
+    object-fit: cover;
+    animation: fadein 2s forwards ;
+    border-radius: 1em ;
+    margin: 0.3em ;
+      box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5);
+}
+.fashion-section h1{
+    text-align: center ;
+    font-size: 2.5em ;
+    color: rgb(240, 133, 1);
+  
+    padding-top: 2.5em ;
+    
+    
+}
+.fashion-section h4{
+   position: relative;
+    top: -1.5em ;
+    border: 1px solid rgb(171, 95, 1);
+   border-radius: 0.5em ;
+   width: 20% ;
+   margin: 30px auto ;
+   text-align: center;
+   padding: 0.3em 0.3em;
+    font-size: 1em ;
+  
+    color: rgb(122, 67, 0);
+   
+}
+.fashion-section{
+     background-color: #e8e7e6;
+     height: 42em ;
+    
+  
+}
+
+
+
+
+
+
+/*****************************************************REVIEW*/
+.back-review{
+  
+     padding-top: -4em ;
+     padding-bottom: 3em ;
+    
+     background-image: url('IMG_5685.png');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    
+}
+.reviews H2{
+    color: #b95300 ;
+    font-weight: bolder ;
+    font-size: 1.6em ;
+}
+#review{
+     padding-top: 9em ;
+}
+.reviews {
+
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+  width: 25em ;
+  margin: 2em auto;
+  padding: 2em 4em ;
+  border-radius: 4em ;
+   border: 0.2em solid #fefdfc;
+ 
+  
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.reviews input,
+.reviews textarea {
+  width: 100%;
+  margin-bottom: 1em ;/*مسافة اسفل البطمة*/
+  padding: 1em ;
+  border-radius: 1em;
+ border: 0.1em solid #fefdfc;
+background: rgba(255, 255, 255, 0.2);
+color: #b95300;
+}
+
+.reviews textarea {
+  resize: none;
+  height: 80px;
+}
+
+.stars {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.stars span {
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.stars span.active {
+  color: gold;
+}
+
+#rev-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ff9800;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#rev-btn:hover {
+  background: #e68900;
+}
+
+
+
+
+#reviewList {
+  list-style: none;
+  padding: 0;
+}
+
+#reviewList ul {
+  background: #f4f4f4;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reviewList ul span {
+  flex-grow: 1;
+}
+
+
+
+
+
+
+/******************************************************FOTEER*/
+
+.footer {
+   
+  background: #fdfdfd;
+  text-align: center;
+  padding-top: 1em ;
+}
+
+.insta h4 {
+  color: #ed620c;
+  margin-bottom: 20px;
+  font-size: 1.5em ;
+}
+
+.insta-grid {
+   
+  display: grid;
+  grid-template-columns: repeat(5, 9em );
+  gap: 1em ;
+  padding: 1em 15em ;
+ 
+ 
+
+}
+
+.insta-grid img {
+  position: relative;
+  width: 100%;
+  height: 10em ;
+  border-radius: 6px;
+  object-fit: cover;
+  text-align: center;
+}
+
+/* Footer Content */
+.footer-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* يوسّط الأعمدة عموديًا */
+  text-align: center;    /* يوسّط النص */
+  padding: 1rem -10rem ;
+
+}
+
+.footer-col{
+    flex: 1 ;
+    max-width: 20em ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* يوسّط كل شي داخل العمود */
+line-height: 3em ;
+
+
+}
+
+.footer-content h5{
+  font-weight: bold;
+  color: #656564;
+  text-align: center;
+}
+
+.footer-content p{
+  color: #f47f11;
+}
+.social img{
+    border-radius: 50% ;
+    margin-top: -2em ;
+}
+
+/* Bottom */
+.footer-bottom {
+  background: linear-gradient(to right, #f5f5f2, #474746);
+  color: #fdfbf9;
+  font-weight: bolder ;
+  padding: 15px;
+  font-size: 1em ;
+}
+/************************************************************/
+
+/* ----------- Mobile (480px) ----------- */
+@media (max-width: 480px) {
+
+
+  header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+  }
+
+  .icons-right {
+  display: flex;
+  gap: 0.8em;
+
+  margin-left: auto  ;   /* 🔥 هذا اللي يدزهم لليمين */
+  position: static;    /* 🔥 */
+}
+
+    .logo {
+        font-size: 2rem;
+        margin-top: 0.5em ;
+        overflow-x: hidden;
+    }
+
+    /* المنيو الأساسية تختفي */
+   header .menue {
+    margin-right: 0 ;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        width: 100%;
+        background-color: #eee;
+        border-top: .1rem solid rgba(0,0,0,0.1);
+       padding: 1em 1em ;
+        display: none;
+        flex-direction: column;
+        gap: 0.4em ;
+        overflow-x: hidden;
+     
+    }
+
+    header .menue a {
+        font-size: 1.1rem;
+          background: #fff;
+          border-radius: 1em ;
+          padding: 0.2em 1em ;
+          border-top: .1rem solid rgba(0,0,0,0.1);
+          display: block;
+      
+    }
+      /* مسافة كويسة بينهم */
+
+
+    /* عرض زر القائمة */
+    .icon-menue {
+        display: block;
+        margin-top: 1.5em ;
+        font-size: 1rem;
+        padding: .4rem .7rem;
+       
+    }
+
+    /* تصغير الأيقونات يمين */
+    .icon {
+        margin-right: 5rem;
+        display: flex;
+           box-shadow: 0 0 0 white;
+       
+    }
+
+    .icon a {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+
+    /* تشغيل القائمة لما يتحقق التشيك */
+    #toggler:checked ~ .menue {
+
+        display: flex;
+    }
+ 
+  .main-page{
+    height: 110vh;
+    background-position: center center;
+    background-size: cover;
+ 
+  }
+
+  
+   .writer{
+    position: relative;
+     top: -2em ;
+    font-size: 1.5em;      /* تصغير النص */
+    line-height: 1.1em;
+   
+
+  }
+
+  
+  .content p{
+    top: -7em ;
+     font-size: 0.6em ;
+  }
+.content span{
+  top: -4em ;
+    font-size: 1em ;
+     font-weight: bold ;
+ 
+}
+  .content{
+    position: relative;
+    top: 2em ;
+    width: 90%;                 /* الجناب قريب من اللابتوب */
+    padding-top: 5em;           /* تصغير من فوق */
+    padding-bottom: 0.1em;        /* تصغير من لوطا */
+    padding-left: 1em;          /* نخلوهم كيف ما هم */
+    padding-right: 1em;
+    border: 0.1em solid #fefdfc;
+ 
+    
+  }
+   .btn{
+    position: relative;
+    top: -3em ;
+    line-height: 1.2;
+    padding: 0.4em 0.2em;
+  }
+
+  /* الصورة */
+  .my-image{
+    width: 20em;            /* تصغير فقط */
+    top: -4.8em;
+    right: -5em;          /* قريبة شوية */
+  }
+  
+
+
+  .heading {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.6em;
+    margin-top: -1.8em ;
+  }
+
+.top-bar-content{
+  height: 1em ;
+  font-size: 0.3em ;
+}
+
+    .home {
+        margin-top: -3em;
+        height: 30em ;
+      
+    }
+    
+    .about {
+        flex-direction: row;
+        padding: 2em;
+        height: 20em ;
+        gap: 1em;
+        margin-top: -1em ;
+    }
+    
+   .video-container{
+   
+    width: 50em;
+    height: 15em;
+    margin-left: 0;
+    border-radius: 1.5em;
+    box-shadow: 0 0.2em 0.2em 0.1em rgba(0,0,0,0.5);
+    animation: VIDEOIV 1.2S ease forwards;
+    opacity: 0 ;
+    transform: translateX(-120%);
+  
+}
+
+.video-container video{
+    width: 100%    ;
+
+    height: 100%  ;
+    margin-left: 0   ;
+    border-radius: 1.5em;
+  
+    object-fit: fill;/*فيديو يعبي الحاوية بدون قص*/
+    
+   
+}
+
+    
+    .video-container h3 {
+        font-size: 1.2rem;
+        bottom: 4.5em;
+        padding: 0.3em;
+        margin-left: 0;
+    }
+    
+    .contact h3 {
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 2.5em ;
+    }
+    
+    .contact p {
+       position: relative;
+       width: 20em ;
+        font-size: 0.5rem;
+        text-align: left;
+        flex-wrap: wrap;
+        line-height: 1.6em ;
+        padding-top: 0.2em;
+    
+    }
+    .contact{
+      animation: textin 5s ease forwards;
+      animation-delay: 0.3s ;
+      opacity: 0 ;
+      transform: translateX(120%);
+    }
+    @keyframes VIDEOIV{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* أنيميشن النص */
+@keyframes textin{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+
+
+/*product*/
+
+     .product {
+        margin-top: -1em;
+          height: 33em ;
+             background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+    }
+    
+    .wrapper {
+        transform: scale(0.7);
+        margin-top: -7em;
+          overflow-x: auto;
+          overflow: hidden;
+    }
+    
+    .slider {
+        width: 20em;
+        height: 34em;
+        border-width: 0.5vh;
+        margin-top: 4em ;
+ 
+   
+
+    }
+    
+    .circle-bg {
+        width: 23em;
+        height: 23em;
+    }
+    
+    .item {
+        width: 6em;
+        height: 9em;
+        margin-top: 4em;
+    }
+    
+    .texts {
+        font-size: 1.2em;
+        top: 8%;
+    }
+    .track img {
+      width: 10em ;
+      height: 14.5em ;
+      margin-top: 3em ;
+    }
+    .buttons {
+        margin-left: 8em;
+        margin-bottom: -3.5em;
+        gap: 1em;
+    }
+    
+    button {
+        padding: 0.8em 2em;
+        font-size: 0.9em;
+    }
+   .texts{
+    font-size: 1.5em ;
+   }
+  .bags-section h1{
+    font-size: 2em ;
+    margin-top: -2em ;
+  }
+  .bags-section h4 {
+    height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    text-align: center;
+    font-size: 0.7em ;
+  }
+  .moving-row h1{
+    font-size: 2em ;
+     margin-top: -5em ;
+  }
+  .moving-row h4{
+     height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+
+  }
+  .moving-row{
+    height: 33em ;
+             background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+  .baby h1{
+      font-size: 2em ;
+     margin-top: -3em ;
+  }
+  .baby h4 {
+  height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+ .fashion-baby{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+   
+  }
+
+  .fashion-baby div{
+  margin-top: 1em ;
+    width: 13em;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em ;
+     box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0,0.2);
+    
+  }
+
+  .fashion-baby img{
+   
+     padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  .bandana-section h1{
+     font-size: 2em ;
+     margin-top: -3em ;
+  }
+  .bandana-section{
+               background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+  .bandana-section h4{
+      height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+  .bandana{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+  
+   
+  
+  }
+  .bandana div{
+  margin-top: 1em ;
+    width: 13em;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em ;
+     box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0,0.2);
+    
+  }
+
+  .bandana  img{
+   
+     padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+
+  /***************/
+   .fashion-section h1{
+     font-size: 2em ;
+     margin-top: -3em ;
+  }
+  .fashion-section{
+    height: 120em ;
+    margin-top: 6em ;
+  }
+
+  .fashion-section h4{
+      height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+  .fashions{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+   
+  
+  }
+  .fashions div{
+  margin-top: 1em ;
+    width: 15em;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em ;
+     box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0,0.2);
+    
+  }
+
+  .fashions  img{
+   
+     padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  /************************/
+     .back-review {
+    padding-top: 20em;   /* بدل -4em لأن السالب ما يخدمش */
+    padding-bottom: 2em;
+    background-size: cover;
+  }
+
+  .reviews {
+    width: 60%;         /* خليها تقريبًا تملا الشاشة */
+    margin: 1em auto;
+    padding: 1.5em 2em; 
+    border-radius: 2em; /* أصغر شوي */
+    border: 0.1em solid #fefdfc;
+    position: relative;
+    top: -2em ;
+  }
+
+  .reviews h2 {
+    font-size: 1.3em;   /* نص أصغر شوي */
+    margin-bottom: 10px;
+  }
+
+  .reviews input,
+  .reviews textarea {
+    padding: 0.8em;
+    font-size: 0.9em;
+  }
+
+  .reviews textarea {
+    height: 60px;       /* أصغر ليناسب الشاشة */
+  }
+
+  .stars span {
+    font-size: 25px;    /* أصغر شوي */
+  }
+
+  #review {
+    padding-top: 10em;   /* أقل شوي */
+  }
+
+
+  .footer {
+    padding-top: 1em;
+               background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+
+  .insta h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.4em ;
+  }
+
+  .insta-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 5em ); /* 3 صور في الصف بدل 5 */
+    gap: 0.3em;
+    padding: 0.4em;
+  }
+
+  .insta-grid img {
+        /* أصغر ليناسب الموبايل */
+    height: 6em;
+  }
+
+  .footer-content {
+    flex-direction: row; /* كل الأعمدة تصير فوق بعض */
+    align-items: center;
+    gap: 0.9em;               /* مسافة بين الأعمدة */
+    padding: 0.1em;
+ 
+    text-align: center;
+  }
+
+  .footer-col {
+    max-width: fit-content;
+    
+    line-height: 2.5em;
+    margin-bottom: 1em;
+  }
+
+  .footer-content h5 {
+    
+    font-size: 0.4em;
+    font-weight: bold;
+  }
+
+  .footer-content p {
+    font-size: 0.5em;
+    width: auto;
+    max-width: 100% ;
+    
+    
+  
+  }
+
+  .social img {
+    width: 1.5em;  /* أصغر الصور الدائرية */
+    height: 1.5em;
+    margin-top: 0; /* إزالة السالب */
+    position: relative;
+    margin-bottom: 0.3em ;
+  }
+
+  .footer-bottom {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+ /* ----------- Tablet (481px - 768px) ----------- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  header {
+    margin-top: 1em ;
+    width: 100%;
+      overflow-x: auto;
+          overflow: hidden;
+    height: 3.3em ;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  /* القائمة */
+  .menue {
+
+  
+    padding: 1rem 0.4rem;
+    gap: 0.9em;
+    margin-bottom: 0.5em ;
+    margin-left: 10em ;
+  }
+ .active{
+  margin-top: -0.1em ;
+ }
+  .menue a {
+    font-size: 1em ;
+  }
+
+  .icon-menue {
+    font-size: 1.8rem;
+  }
+.icons-right{
+    position: absolute;
+    margin-left: 45em ;
+  display: flex;
+  justify-content: flex-end;
+ /* يدزهم لليمين */
+
+  gap:1.2em;          /* مسافة كويسة بينهم */
+}
+  /* الصفحة الرئيسية */
+  .main-page {
+    height: 112vh;
+  }
+
+  .writer {
+    font-size: 2.2em;
+    position: relative;
+    top: 1em;
+  }
+
+  .content {
+    width: 75%;
+    height: 55%;
+    padding: 0.5em 1em;
+    top: 2em ;
+  }
+
+  .content p {
+    font-size: 0.9em;
+    top: 0;
+  }
+
+  .content span {
+    font-size: 1.4em;
+    top: 0.2em ;
+  }
+
+  .btn {
+    top: 0;
+    padding: 0.6em 0.8em;
+  }
+
+  /* الصورة */
+  .my-image {
+    width: 22.7em;
+    top: -3.4em ;
+    left: 20em ;
+  }
+
+  /* about */
+  .heading {
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+    margin-top: -0.7em ;
+  }
+    .home {
+        margin-top: -3.2em;
+        height: 32em ;
+      
+    }
+    
+    .about {
+        flex-direction: row;
+        gap: 0.5em ;
+        padding: 1em 3em ;
+        margin-top: 1em ;
+    }
+    
+   .video-container{
+   
+    width: 22em;
+    height: 20em;
+    margin-left: 0;
+    border-radius: 1.5em;
+    box-shadow: 0 0.2em 0.2em 0.1em rgba(0,0,0,0.5);
+    animation: VIDEOIV 1.2S ease forwards;
+    opacity: 0 ;
+    transform: translateX(-120%);
+  
+}
+
+.video-container video{
+    width: 100%    ;
+
+    height: 100%  ;
+    margin-left: 0   ;
+    border-radius: 1.5em;
+  
+    object-fit: fill;/*فيديو يعبي الحاوية بدون قص*/
+    
+   
+}
+
+    
+    .video-container h3 {
+        font-size: 1.6rem;
+        bottom: 4.3em;
+        padding: 0.5em;
+        margin-left: 0;
+    }
+    
+    .contact h3 {
+        font-size: 1.9em;
+        text-align: center;
+        line-height: 2.5em ;
+    }
+    
+    .contact p {
+       position: relative;
+       width: 20em ;
+        font-size: 0.8rem;
+        text-align: left;
+        flex-wrap: wrap;
+        line-height: 1.6em ;
+        padding-top: 0.2em;
+    
+    }
+    .contact{
+      animation: textin 5s ease forwards;
+      animation-delay: 0.3s ;
+      opacity: 0 ;
+      transform: translateX(120%);
+    }
+    @keyframes VIDEOIV{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* أنيميشن النص */
+@keyframes textin{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* product */
+
+   .product {
+        margin-top: -1em;
+          height: 33em ;
+             background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+    }
+    
+    .wrapper {
+        transform: scale(0.7);
+        margin-top: -7em;
+          overflow-x: auto;
+          overflow: hidden;
+    }
+    
+    .slider {
+        width: 22em;
+        height: 34em;
+        border-width: 0.5vh;
+        margin-top: 4em ;
+      
+ 
+   
+
+    }
+    
+    .circle-bg {
+        width: 25em;
+        height: 25em;
+    }
+    
+    .item {
+        width: 6em;
+        height: 9em;
+        margin-top: 4em;
+    }
+    
+    .texts {
+        font-size: 1.2em;
+        top: 8%;
+    }
+    .track img {
+      width: 10em ;
+      height: 15.5em ;
+      margin-top: 3em ;
+    }
+    .buttons {
+        margin-left: 16em;
+        margin-bottom: -4.5em;
+        gap: 1em;
+    }
+    
+    button {
+        padding: 0.9em 2.5em;
+        font-size: 1em;
+    }
+  .texts{
+    font-size: 1.8em ;
+   }
+  /*  bag / boxes الأقسام */
+   .bags-section h1{
+    font-size: 2em ;
+    margin-top: -2em ;
+  }
+  .bags-section h4 {
+    height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    text-align: center;
+    font-size: 0.7em ;
+  }
+  .moving-row h1{
+    font-size: 2em ;
+     margin-top: -5em ;
+  }
+  .moving-row h4{
+     height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+
+  }
+  .moving-row{
+    height: 33em ;
+             background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+ /* baby */
+  .baby h1{
+      font-size: 2em ;
+     margin-top: -2.5em ;
+  }
+  .baby h4 {
+  height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+  /* bandana */
+
+ .bandana-section h1{
+     font-size: 2em ;
+     margin-top: -2.8em ;
+  }
+  .bandana-section{
+               background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+  .bandana-section h4{
+      height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+  /* review */
+  
+  .reviews {
+    
+    width: 45%;         /* خليها تقريبًا تملا الشاشة */
+    margin: 2em auto;
+    padding: 2.5em 2em; 
+    border-radius: 2em; /* أصغر شوي */
+    border: 0.1em solid #fefdfc;
+  }
+
+  .reviews h2 {
+    font-size: 1.3em;   /* نص أصغر شوي */
+    margin-bottom: 10px;
+  }
+  .back-review {
+    height: 31em ;
+ 
+  }
+
+  .reviews input,
+  .reviews textarea {
+    padding: 0.8em;
+    font-size: 0.9em;
+  }
+
+  .reviews textarea {
+    height: 60px;       /* أصغر ليناسب الشاشة */
+  }
+
+  .stars span {
+    font-size: 25px;    /* أصغر شوي */
+  }
+
+  #review {
+    padding-top: 5em;   /* أقل شوي */
+  }
+
+/*footer*/
+  .footer {
+    padding-top: 2em;
+               background: radial-gradient(circle at top,
+        #FFFBEA 0%,
+        #FFF2C2 45%,
+        #FFE08A 100%
+    );
+  }
+
+  .insta h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.4em ;
+  }
+
+  .insta-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 10em ); /* 3 صور في الصف بدل 5 */
+    gap: 0.3em;
+    padding: 3.4em;
+    margin-top: -3em ;
+  }
+
+  .insta-grid img {
+        /* أصغر ليناسب الموبايل */
+    height: 10em;
+  }
+
+  .footer-content {
+    flex-direction: row; /* كل الأعمدة تصير فوق بعض */
+    align-items: center;
+    gap: 2em;               /* مسافة بين الأعمدة */
+    padding: 0.1em;
+   line-height: 2em ;
+    text-align: center;
+  }
+
+  .footer-col {
+    max-width: fit-content;
+    line-height: 2.5em;
+    margin-bottom: 1em ;
+  }
+
+  .footer-content h5 {
+    margin-top: -2em ;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .footer-content p {
+    font-size: 0.8em;
+    width: auto;
+    max-width: 100% ;
+    margin-top: 0.9em ;
+  
+  }
+
+  .social img {
+    width: 1.5em;  /* أصغر الصور الدائرية */
+    height: 1.5em;
+    margin-top: 0; /* إزالة السالب */
+    position: relative;
+    margin-bottom: 1em ;
+  }
+
+  .footer-bottom {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+   .fashion-section h1{
+     font-size: 2em ;
+     margin-top: -3em ;
+  }
+  .fashion-section{
+    height: 140em ;
+    margin-top: 6em ;
+  }
+
+  .fashion-section h4{
+      height: 2em;
+    padding: 0.5em ;
+    width: 18em ;
+    font-size: 0.7em ;
+  }
+  .fashions{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    flex-wrap: wrap;
+   
+  
+  }
+  .fashions div{
+  margin-top: 1em ;
+    width: 18em;
+    height: 18em;
+    display: flex;
+    
+
+    align-items: center;
+    border-radius: 2em ;
+     box-shadow: 0 0.3em 0.3em 0.3em rgba(0, 0, 0,0.2);
+    
+  }
+
+  .fashions  img{
+   
+     padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+}
+
+
+
